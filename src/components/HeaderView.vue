@@ -3,14 +3,12 @@
     <header class="hdex-header">
       <div class="top-bar">
         <div class="center">
-          <h1 class="logo">MOTIVE</h1>
+          <h1 class="logo" @click="moveToLink('/')">MOTIVE</h1>
         </div>
         <div class="right">
           <span class="lang">KOR / ₩</span>
           <span class="icon">🔍</span>
-          <router-link to="/user/login">
-            <span class="icon">👤</span></router-link
-          >
+          <span class="icon" @click="moveToLink('/user/login')">👤</span>
 
           <span class="icon">🛍️</span>
         </div>
@@ -30,7 +28,13 @@
   </body>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+import router from '~/router'
+
+const moveToLink = (link: string) => {
+  router.push(link)
+}
+</script>
 
 <style scoped>
 body {
