@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "~util/*": ["util/*"],
+      "~types/*": ["types/*"],
+      "~components/*": ["components/*"],
+      "~views/*": ["views/*"]
+    },
+
+    /* 기본 언어 설정 */
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    /* JSX & React 설정 */
+    "jsx": "react-jsx",
+    "types": ["react", "react-dom"],
+
+    /* 타입 체크 옵션 */
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+
+    /* 빌드 관련 */
+    "noEmit": true,
+
+    /* ver. 문제 방지 */
+    "verbatimModuleSyntax": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
